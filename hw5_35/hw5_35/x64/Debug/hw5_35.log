@@ -1,3 +1,3 @@
 ﻿  main.c
-C:\Users\richi\Desktop\Homework3_2\hw5_35\hw5_35\main.c(27,20): warning C4018: '<=': signed/unsigned 不相符
+C:\Users\richi\Desktop\Homework3_2\hw5_35\hw5_35\main.c(16,20): warning C4018: '<=': signed/unsigned 不相符
   hw5_35.vcxproj -> C:\Users\richi\Desktop\Homework3_2\hw5_35\x64\Debug\hw5_35.exe

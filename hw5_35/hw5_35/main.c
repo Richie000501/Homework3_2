@@ -1,17 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-unsigned long  int fibonacci(unsigned int n);
-int main()
-{
-	int n;
-	printf("想知道fibonacci數列的第n位為:");
-	scanf_s("%d", &n);
-	unsigned long int result = fibonacci(n);
-	printf("第%d位為:%u", n,result);
-
-}
-
 unsigned long int fibonacci(unsigned int n)
 {
 	unsigned long int a = 0, b = 1, total;
@@ -31,4 +20,23 @@ unsigned long int fibonacci(unsigned int n)
 		b = total;
 	}
 	return total;
+}
+int main()
+{
+	int n;
+	printf("想知道fibonacci數列的第n位為:");
+	scanf_s("%d", &n);
+	unsigned long int result = fibonacci(n);
+	printf("第%d位為:%u\n", n,result);
+	unsigned long long c = 0, d = 1, fib = 1;
+	unsigned int count = 1;
+	while (fib <= ULLONG_MAX - d) { 
+		fib = c + d;
+		c = d;
+		d = fib;
+		count++;
+	}
+	printf("在此系統上可以儲存的最大 Fibonacci 項數為：%u，對應的 Fibonacci 數為：%llu\n", count , c);
+
+
 }
